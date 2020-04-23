@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="src/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Display player cards vanilla JS" />
+    <title>Feed</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@700&display=swap" rel="stylesheet">
+</head>
+<body id="app_body" class="default">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="menu_wrapper" class="menu_wrapper closed">
+        <div id="menu_toggler">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="32px"
+                id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px"
+                xml:space="preserve">
+                <path
+                    d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z" />
+                </svg>
+        </div>
+        <div id="menu_container">
+            <div class="select_container">
+                <div class="amounts_wrapper">
+                    <div id="options_new_amount" class="option_title">
+                        <span>Load New:</span><span>2</span>
+                    </div>
+                    <ul class="options_container skip_border" id="new_options_dropdown">
+                        <li class="option_item skip_border" data="2">2</li>
+                        <li class="option_item" data="4">4</li>
+                        <li class="option_item" data="10">10</li>
+                        <li class="option_item" data="20">20</li>
+                    </ul>
+                </div>
+                <div class="amounts_wrapper">
+                    <div id="options_old_amount" class="option_title">
+                        <span>Load Old:</span><span>10</span>
+                    </div>
+                    <ul class="options_container " id="old_options_dropdown">
+                        <li class="option_item" data="2">2</li>
+                        <li class="option_item" data="4">4</li>
+                        <li class="option_item" data="10">10</li>
+                        <li class="option_item" data="20">20</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="select_container">
+                <div class="amounts_wrapper">
+                    <div id="options_theme" class="option_title">
+                        <span>Theme:</span><span>Default</span>
+                    </div>
+                    <ul class="options_container " id="options_dropdown">
+                        <li class="option_item" data="default">Default</li>
+                        <li class="option_item" data="dark_mode">Dark</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="root_app">
+        <div id="content_container" class="content_container">
+            <div id="feed_end"></div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="src/index.js"></script>
+</html>

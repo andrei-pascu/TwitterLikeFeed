@@ -1,0 +1,395 @@
+*,
+p, h1, h2, h3 {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-weight: normal; 
+}
+
+div, section, p, h1, h2, h3, span {
+    box-sizing: border-box; 
+}
+
+#root_app {
+    max-height: 100vh;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.5s;
+
+    padding-top: 0;
+    /* can change */
+}
+
+#menu_toggler {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 52px;
+    width: 54px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    cursor: pointer;
+    /* transition: background-color 1s; */
+}
+
+#menu_toggler svg {
+    pointer-events: none;
+    user-select: none;
+    stroke-dashoffset: 65px;
+    stroke-dasharray: 65px;
+    transition: stroke-dashoffset 0.2s linear;
+}
+
+#menu_container {
+    cursor: pointer;
+    user-select: none;
+}
+
+#menu_wrapper.closed #menu_container{
+    max-height: 0;
+    overflow: hidden;
+}
+
+#menu_wrapper #menu_container{
+}
+
+/* #feed_end {
+    height: 200px;
+} */
+.select_container {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.amounts_wrapper {
+    position: relative;
+    height: 36px;
+    width: 100%;
+    border-bottom: 2px solid black;
+    pointer-events: all;
+}
+
+.amounts_wrapper {
+    display: inline-block;
+}
+
+#menu_container {
+    position: fixed;
+    top: 52px;
+    left: 0;
+    width: 130px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    align-items: flex-end;
+    font-family: 'Nanum Gothic Coding', monospace;
+}
+
+
+
+
+
+.closed .select_container{
+    display: none;
+}
+
+.option_title {
+    height: 100%;
+    width: 100%;
+    padding: 8px 0 0 10px;
+}
+
+.option_title span {
+    pointer-events: none;
+}
+
+
+
+.options_container {
+    position: absolute;
+    top: -2px;
+    left: 100%;
+    /* display: none; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+    /* padding: 0 10px; */
+    width: 0;
+}
+
+
+.options_container.open_select {
+    width: auto;
+    border: 1px solid black;
+}
+
+.option_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border: 1px solid black;
+    padding: 9px 22px;
+    width: 200%;
+}
+
+
+
+
+
+.profile_image {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-size: contain;
+    border: 1px black solid;
+}
+
+.tweet_element_container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.tweet_element {
+    display: flex;
+    justify-content: flex-start;
+    height: auto;
+    /* margin: 20px; */
+    margin-bottom: 60px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid black;
+    padding: 22px 28px 45px 18px;
+    
+    background-color: #ffffff7a;
+}
+
+
+
+
+
+.user_and_tweet_container {
+    display: flex;
+    flex-direction: column;
+}
+
+.content_container {
+    padding: 40px 90px 50px 70px;
+    /* can change */
+    width: 640px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    transition: 1s;
+}
+
+/* .tweet_element_container:nth-last-child(2) {
+    padding-bottom: 200px;
+} */
+
+.username_container {
+    padding: 8px 0 0 18px;
+    font-family: impact;
+}
+.user_tweet_container    {
+    padding: 10px 0 0 18px;
+    font-family: 'Nanum Gothic Coding', monospace;
+    font-weight: 700;
+}
+
+.username_container h2 {
+    padding: 5px;
+}
+.user_tweet_container p    {
+    padding: 5px;
+}
+
+.default .username_container h2::selection {
+    background: rgba(14, 118, 156, 0.342);
+}
+.default .user_tweet_container p::selection    {
+    background: rgba(14, 118, 156, 0.425);
+}
+
+.dark_mode .username_container h2::selection {
+    /* background: rgba(14, 118, 156, 0.425); */
+    background: rgba(255, 255, 255, 0.767);
+}
+.dark_mode .user_tweet_container p::selection    {
+    /* background: rgba(14, 118, 156, 0.425); */
+    background: rgba(255, 255, 255, 0.425);
+}
+
+
+
+
+
+.default #root_app {
+    background-color: rgb(48, 79, 90);
+}
+.dark_mode #root_app {        
+    background-color: rgb(25, 25, 25);
+}
+
+
+
+
+.default #menu_toggler {
+    background-color: #2fc8ffb8;
+    border: 1px black solid;
+} 
+.dark_mode #menu_toggler {
+    background-color: #9f9f9b26;
+    border: 1px #d4d4d4 solid;
+} 
+
+
+.default #menu_toggler svg {
+    fill: #d4d4d4;
+    stroke: black;
+    /* transition: stroke-dashofset */
+} 
+.dark_mode #menu_toggler svg {
+    stroke: #d4d4d4;
+} 
+
+
+.default #menu_toggler:hover {
+    background-color: #2fc8ff;
+} 
+.dark_mode #menu_toggler:hover {
+    background-color: #797979;
+} 
+
+
+
+
+.default #menu_toggler:hover > svg {
+    /* fill: red; */
+    stroke-dashoffset: 0;
+    
+} 
+.dark_mode #menu_toggler:hover > svg {
+    /* fill: blue; */
+    stroke-dashoffset: 0;
+} 
+
+
+
+
+
+
+
+.default #menu_container {
+    background-color: #253c44f0;
+    color: white;
+} 
+.dark_mode #menu_container {
+    background-color: rgb(42, 165, 89);
+} 
+
+
+.default #menu_container {
+    background-color: #253c44f0;
+    color: white;
+} 
+.dark_mode #menu_container {
+    background-color: rgba(130, 130, 123, 0.952);
+} 
+
+
+.default .amounts_wrapper .option_title:hover {
+    background-color: #2fa6d159;
+    color: white;
+} 
+.dark_mode .amounts_wrapper .option_title:hover {
+    background-color: #c5c5c5;
+} 
+
+.default .amounts_wrapper .option_title.selected {
+    background-color: #2fa6d159;
+    color: white;
+} 
+.dark_mode .amounts_wrapper .option_title.selected {
+    background-color: #c5c5c5;
+} 
+
+.default .option_item:hover {
+    background-color: #2fa6d1cf;
+} 
+.dark_mode .option_item:hover {
+    background-color: white;
+} 
+
+
+
+
+
+.default .amounts_wrapper {
+    /* background-color: rgba(0, 0, 0, 0.288); */
+}
+.dark_mode .amounts_wrapper {
+    /* background-color: rgba(255, 255, 255, 0.288); */
+}
+
+
+
+.default .options_container {
+    background-color: rgba(29, 44, 49, 0.9);
+}
+.dark_mode .options_container {
+    background-color: rgba(210, 210, 204, 0.93);
+}
+
+.option_item {
+    transform: translateX(-40px);
+    opacity: 0;
+}
+.open_select .option_item {
+    transform: translateX(0);
+    opacity: 1;
+    transition: transform 300ms, background-color 250ms, opacity 250ms;
+}
+
+
+
+.default #content_container {
+    background-color: beige;
+}
+.dark_mode #content_container {
+    background-color: rgb(71, 71, 63);
+}
+
+
+
+.default .tweet_element {
+    /* box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75); */
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.68);
+}
+.dark_mode .tweet_element {
+    /* box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75); */
+    box-shadow: 10px 10px 5px 0px rgb(25, 25, 25);
+    color: rgb(25, 25, 25);
+}
+
+.options_container.skip_border {
+    top: 0;
+}
+.option_item.skip_border {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+@media only screen and (min-width: 768px) { 
+
+}
